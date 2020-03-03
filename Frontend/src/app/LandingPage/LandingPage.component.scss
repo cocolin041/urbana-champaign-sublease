@@ -1,0 +1,34 @@
+@import '../../assets/scss/abstracts/variables.scss';
+@import '../../assets/scss/components/buttons.scss';
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/backgroundImages/landing.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logobox {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+       text-transform: uppercase; 
+    }
+
+    &__btn {
+        @extend %btn;
+        padding: 1.5rem 5.0rem;
+        font-size: 1.5rem;
+        background-image: linear-gradient(to right, $color-pink-light, $color-pink-dark);
+    }
+}

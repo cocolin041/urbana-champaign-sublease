@@ -1,0 +1,47 @@
+// use ::ng-deep to mutate the style of Angular material
+@import '../../assets/scss/abstracts/variables.scss';
+mat-toolbar {
+    background-color: pink;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    font-family: $font-primary;
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        font-family: $font-primary;
+    }
+}
+
+.content {
+    min-height: 100%;
+    margin-top: 50px;
+    padding: 7.5rem;
+}
+
+.footer {
+    border-top: 1px solid $color-grey-superlight;
+    width: 100%;
+    min-height: 5vh;
+    padding: 3.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__copyright {
+
+    }
+}
