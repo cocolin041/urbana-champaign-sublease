@@ -1,5 +1,34 @@
 // use ::ng-deep to mutate the style of Angular material
 @import '../../assets/scss/abstracts/variables.scss';
+@import '../../assets/scss/abstracts/mixins.scss';
+
+mat-sidenav {
+    width: 30%;
+}
+
+.sidenav {
+    &__title {
+        background-color: pink;
+        font-family: $font-primary;
+        text-align: center;
+        padding: 4.5rem;
+    }
+}
+
+mat-panel-title {
+    font-size: 2rem;
+}
+
+.panel__inner {
+    border-top: 1px solid $color-grey-superlight;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.panel__inner:hover {
+    background-color: $color-grey-superlight;
+}
+
 mat-toolbar {
     background-color: pink;
     width: 100%;
@@ -14,11 +43,45 @@ mat-toolbar {
     justify-content: space-between;
 
     &__logo {
+        display: flex;
+        align-items: center;
+        
+        @include respond(phone) {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    &__phone {
+
+        &--menu {
+            width: 4rem;
+            height: 4rem;
+            display: none;
+
+            @include respond(phone) {
+                display: block;
+            }
+        }
+
+        &--login {
+
+            display: none;
+
+            @include respond(phone) {
+                display: block;
+                cursor: pointer;
+            }
+        }
     }
 
     &__items {
         display: flex;
         justify-content: space-between;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__item {
